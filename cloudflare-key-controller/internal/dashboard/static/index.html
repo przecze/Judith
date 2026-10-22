@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>cfkey</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>Cloudflare Key Controller</h1>
+  <div id="session"></div>
+  <button id="stop" class="danger" hidden>End session</button>
+</header>
+<main>
+  <p id="message" hidden></p>
+  <section>
+    <h2>Pending requests <span id="pending-count" class="count"></span></h2>
+    <div id="pending"></div>
+  </section>
+  <section>
+    <h2>Active keys <span id="active-count" class="count"></span></h2>
+    <div id="active"></div>
+  </section>
+  <section>
+    <h2>History</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Time</th><th>Status</th><th>Key</th><th>Reason</th><th>Requested by</th><th>Note</th></tr></thead>
+        <tbody id="history"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
